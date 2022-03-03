@@ -1,0 +1,56 @@
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #000 0%, #fff 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color:#101010;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+  border-radius: 30px;
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.botao{
+  background-color: white;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+}
+
+.botao.ativa,
+.botao:active {
+  background-color: blue;
+  border: 4px solid  black;
+  color: white;
+  outline: none;
+}
+
+.botao.focus,
+.botao:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px yellow;
+}
+
+.botao.active:focus,
+.botao:active:focus {
+  box-shadow: 3px 3px 0 blue inset, 1px 1px 10px white;
+}
